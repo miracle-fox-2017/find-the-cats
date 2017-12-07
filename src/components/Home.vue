@@ -21,13 +21,13 @@
 
 <script>
 export default {
-  firebase () {
-    {
-      cats: this.$db.ref('cats');
+  data: function () {
+    return {
+      cats: this.$db.ref('cats')
     }
   },
   computed: {
-    latestCats: {
+    latestCats: function () {
       this.cats.reverse()
     }
   }

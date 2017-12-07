@@ -4,9 +4,13 @@ const Home = () => import('@/components/Home')
 const Post = () => import('@/components/Post')
 const Detail = () => import('@/components/Detail')
 
+// import Post from '@/components/Post'
+// import Detail from '@/components/Detail'
+
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

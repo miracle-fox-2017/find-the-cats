@@ -4,7 +4,7 @@ import Vue from 'vue'
 import VueFire from 'vuefire'
 import axios from 'axios'
 import App from './App'
-import router from 'router'
+import router from './router'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import firebase from 'firebase'
@@ -15,7 +15,10 @@ const config = {
 }
 const firebaseApp = firebase.initializeApp(config)
 
-Vue.prototype.$http = axios
+Vue.prototype.$http = axios.create({
+  baseURL: 'http://random.cat'
+})
+
 Vue.prototype.$db = firebaseApp.database()
 Vue.use(VueFire)
 Vue.use(VueMaterial)

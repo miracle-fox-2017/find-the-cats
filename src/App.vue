@@ -38,14 +38,18 @@
 
 <script>
 export default {
-  name: 'app',
+  data () {
+    return {
+      name: 'app'
+    }
+  },
   methods: {
-    toggleSideNavLeft(route) {
-      if (typeof (route) == 'object') {
+    toggleSideNavLeft (route) {
+      if (typeof (route) === 'object') {
         this.$refs.leftSidenav.toggle()
       } else {
         this.$refs.leftSidenav.toggle()
-        this.router.push(route)
+        this.$router.push(route)
       }
     }
   }

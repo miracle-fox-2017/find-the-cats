@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const Home = () => import('@/components/Home')
+// const Home = () => import('@/components/Home')
+import Home from '@/components/Home'
 const Post = () => import('@/components/Post')
 const Detail = () => import('@/components/Detail')
 

@@ -43,11 +43,11 @@ export default {
         detail: ''
       },
       loading: true,
-      err: false,
+      err: false
     }
   },
   methods: {
-    getCat() {
+    getCat () {
       this.$http.get('http://random.cat/meow')
         .then((response) => {
           this.randomCat.url = response.data.file
@@ -57,14 +57,14 @@ export default {
           this.err = err
         })
     },
-    postCat() {
+    postCat () {
       console.log('postCat ', this.randomCat)
       this.$db.ref('cats').push(this.randomCat, () => {
-        this.$router.push('/');
+        this.$router.push('/')
       })
     }
   },
-  mounted: {
+  mounted () {
     this.getCat()
   }
 }
@@ -73,9 +73,9 @@ export default {
 <style lang="css" scoped>
 #post-cat,
 .md-card {
-  width: 100%;
+  width: 100%
 }
 .md-card-media {
-  text-align: center;
+  text-align: center
 }
 </style>

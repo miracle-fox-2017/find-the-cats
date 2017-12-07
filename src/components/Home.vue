@@ -20,14 +20,13 @@
 </template>
 
 <script>
+// import { cats } from ''
 export default {
-  firebase () {
-    {
-      cats: this.$db.ref('cats');
-    }
+  firebase: {
+    cat: this.$db.ref('cats')
   },
   computed: {
-    latestCats: {
+    latestCats () {
       this.cats.reverse()
     }
   }

@@ -50,6 +50,7 @@ export default {
     getCat () {
       this.$http.get('http://random.cat/meow')
         .then((response) => {
+          console.log(response)
           this.randomCat.url = response.data.file
           setTimeout(() => { this.loading = false }, 1000)
         })
@@ -64,8 +65,8 @@ export default {
       })
     }
   },
-  mounted: {
-    // this.getCat()
+  mounted () {
+    this.getCat()
   }
 }
 </script>

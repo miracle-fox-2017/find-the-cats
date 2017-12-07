@@ -10,20 +10,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Home,
-      children: [
-        {
-          path: '/',
-          name: 'Home',
-          component: Post
-        },
-        {
-          path: '/detail/:id',
-          props: true,
-          name: 'Detail',
-          component: Detail
-        }
-      ]
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/post',
+      name: 'Post',
+      component: Post
+    },
+    {
+      path: '/detail/:id',
+      props: true,
+      name: 'Detail',
+      component: Detail
     }
   ]
 })

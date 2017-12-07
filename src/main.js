@@ -19,6 +19,7 @@ Vue.prototype.$http = axios
 Vue.prototype.$db = firebaseApp.database()
 Vue.use(VueFire)
 Vue.use(VueMaterial)
+Vue.use(router)
 
 Vue.material.registerTheme({
   default: {

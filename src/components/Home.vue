@@ -21,7 +21,8 @@
 
 <script>
 export default {
-  firebase () {
+  name: 'Home',
+  firebase: {
     {
       cats: this.$db.ref('cats');
     }

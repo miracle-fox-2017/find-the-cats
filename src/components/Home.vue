@@ -1,6 +1,9 @@
 <template lang="html">
   <div id="home">
     <h1>Home</h1>
+    <router-link :to="'/post/'">
+      <md-button>Post</md-button>
+    </router-link>
     <md-card v-for="cat in latestCats" :key="cat['.key']">
       <md-card-media>
         <img src="cat.url" :alt="cat.comment">
@@ -16,7 +19,6 @@
         </router-link>
       </md-card-actions>
     </md-card>
-    <h1>{{cats[0]['.key']}}</h1>
   </div>
 </template>
 

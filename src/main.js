@@ -14,8 +14,13 @@ const config = {
   projectId: 'progressive-tamvan'
 }
 const firebaseApp = firebase.initializeApp(config)
+import axios from 'axios'
 
-Vue.prototype.$http = axios
+Vue.prototype.$http = axios.create({
+  baseURL: "http://random.cat"
+})
+
+
 Vue.prototype.$db = firebaseApp.database()
 Vue.use(VueFire)
 Vue.use(VueMaterial)

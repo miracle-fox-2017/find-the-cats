@@ -11,7 +11,7 @@
       </md-card-header>
 
       <md-card-actions>
-        <router-link to="'/detail/'+cat['.key']">
+        <router-link :to="{ path: '/detail/'+cat['.key'], params: {} }">
           <md-button>Details</md-button>
         </router-link>
       </md-card-actions>

@@ -20,10 +20,9 @@
 </template>
 
 <script>
-// import { cats } from ''
 export default {
   firebase: {
-    cat: this.$db.ref('cats')
+    latestCats: this.$db.ref('cat')
   },
   computed: {
     latestCats () {

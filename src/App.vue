@@ -37,11 +37,15 @@
 </template>
 
 <script>
-export {
-  name: 'app'
+import Post from '@/components/Post'
+export default {
+  name: 'app',
+  components: {
+    Post
+  },
   methods: {
-    toggleSideNavLeft(route) {
-      if (typeof (route) == 'object') {
+    toggleSideNavLeft (route) {
+      if (typeof (route) === 'object') {
         this.$refs.leftSidenav.toggle()
       } else {
         this.$refs.leftSidenav.toggle()

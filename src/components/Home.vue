@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import * as firebase from 'firebase'
 export default {
   firebase () {
     {
@@ -27,7 +28,7 @@ export default {
     }
   },
   computed: {
-    latestCats: {
+    latestCats: function () {
       this.cats.reverse()
     }
   }

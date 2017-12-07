@@ -22,11 +22,12 @@
 <script>
 export default {
   firebase () {
-    this.$db.ref('cats')
+    return {
+      cats: this.$db.ref('cats')
+    }
   },
   computed: {
     latestCats () {
-      console.log(this.cats)
       this.cats.reverse()
     }
   }

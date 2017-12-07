@@ -9,26 +9,27 @@
       <md-card-header>
         <div class="md-title">{{ cat.comment }}</div>
       </md-card-header>
-
+<!-- '/detail/'+cat['.key' -->
       <md-card-actions>
-        <router-link to="'/detail/'+cat['.key']">
+        <router-link :to="'/detail/'+cat['.key']">
           <md-button>Details</md-button>
         </router-link>
       </md-card-actions>
     </md-card>
+    <h1>{{cats[0]['.key']}}</h1>
   </div>
 </template>
 
 <script>
 export default {
   firebase () {
-    {
-      cats: this.$db.ref('cats');
+    return {
+      cats: this.$db.ref('cats')
     }
   },
   computed: {
-    latestCats: {
-      this.cats.reverse()
+    latestCats () {
+      return this.cats.reverse()
     }
   }
 }

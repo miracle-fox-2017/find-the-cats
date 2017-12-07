@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Detail from '@/components/Detail'
 import Home from '@/components/Home'
-import Post from '@/components/Detail'
+import Post from '@/components/Post'
 // const Home = () => import('@/components/Home')
 // const Post = () => import('@/components/Post')
 // const Detail = () => import('@/components/Detail')
@@ -10,7 +10,7 @@ import Post from '@/components/Detail'
 Vue.use(Router)
 
 export default new Router({
-  model:'history',
+  model: 'history',
   routes: [
     {
       path: '/',

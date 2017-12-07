@@ -31,6 +31,7 @@
     </md-sidenav>
 
     <md-layout md-gutter class="container">
+      <!-- <h1>coba</h1> -->
       <router-view></router-view>
     </md-layout>
   </div>
@@ -45,7 +46,7 @@ export default {
         this.$refs.leftSidenav.toggle()
       } else {
         this.$refs.leftSidenav.toggle()
-        this.router.push(route)
+        this.$router.push(route)
       }
     }
   }

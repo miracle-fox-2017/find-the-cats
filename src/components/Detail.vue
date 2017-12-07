@@ -23,7 +23,7 @@ export default {
     return {
       cat: {
         asObject: true,
-        source: this.$db.ref('cats').child(this.id),
+        source: this.$db.ref('cats').child(this.id)
       }
     }
   }
